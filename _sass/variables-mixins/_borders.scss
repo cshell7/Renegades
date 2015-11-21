@@ -1,0 +1,170 @@
+/* ----------------------------------------------------------------------------------
+			BORDERS MIXIN
+---------------------------------------------------------------------------------- */
+
+/* +============================+
+		A. INTRODUCTION/NOTES:
++=============================+ */
+
+/*
+
+Yo Yo Yo, please never use the border properties(border, border-radius, border-width, etc.) on your classes, instead please use these mixins below. Leave them blank to just set the defaults. The only time it is ok to not use the mixin is when you are setting something to zero.
+
+Find below you will the mixins for border setting yes.
+
+
+*/
+
+
+/* +=============================+
+		B. TABLE OF CONTENTS:
++=============================+ */
+
+/*
+
+    A. Notes
+    B. Table of Contents
+
+	1. Borders
+    1.1 Border Radius
+    1.2 Border Styles
+    1.3 Border
+
+*/
+
+
+/* +=============================+
+		1. Borders
++=============================+ */
+
+//Use the 'border' mixin for most cases, but if you need more control you can use both 'border-radius' and 'border-style'
+
+
+/* =-----------------------------=
+		1.1 Border Radius
+ */
+
+//USAGE: To use this mixin you can use it one of three ways
+  //@include border-radius (radius amount); Amount can be either unitless, pixels or pecentage or any other units. it will default to apply to all the corners. If you leave radius amount blank it will default to the default border radius.
+  //@include border-radius (radius amount, corners);  Corners can be one of the following: all, a, t, b, l, r, tl, tr, bl, br.
+  //@include border-radius (tl, tr, bl, br); tl being top-left border radius amount can be set specifically or as either: sm, md, lg to use the standard sizes.
+
+//NOTE: Radius amount can be left unitless, it is calculated in pixels. You can also specify what unit you want to use.
+
+@mixin border-radius ($radius-amount-or-tl: $border-radius--sm, $location-or-tr: 'all', $bl: null, $br: null) {
+
+  //Sets units to be set by mixin values by default, it is later set to px if there are no units used. This allows both unit and unitless values to be inputted in the mixin.
+  $unit-tl: ''; $unit-tr: ''; $unit-bl: ''; $unit-br: '';
+
+  //Sets the size for the three default sizes. Use these primarily instead of just setting the number.
+  @if $radius-amount-or-tl =="sm"{ $radius-amount-or-tl: $border-radius--sm;}
+  @if $radius-amount-or-tl =="md"{ $radius-amount-or-tl: $border-radius--md;}
+  @if $radius-amount-or-tl =="lg"{ $radius-amount-or-tl: $border-radius--lg;}
+  @if $location-or-tr =="sm"{ $location-or-tr: $border-radius--sm;}
+  @if $location-or-tr =="md"{ $location-or-tr: $border-radius--md;}
+  @if $location-or-tr =="lg"{ $location-or-tr: $border-radius--lg;}
+  @if $bl =="sm"{ $bl: $border-radius--sm;}
+  @if $bl =="md"{ $bl: $border-radius--md;}
+  @if $bl =="lg"{ $bl: $border-radius--lg;}
+  @if $br =="sm"{ $br: $border-radius--sm;}
+  @if $br =="md"{ $br: $border-radius--md;}
+  @if $br =="lg"{ $br: $border-radius--lg;}
+
+  //Sets units to px if unitless
+  @if unitless($radius-amount-or-tl) == true { $unit-tl: 'px'}
+  $radius: #{$radius-amount-or-tl}$unit-tl;
+
+  //Sets radius based on selector: all, a, t, b, l, r, tl, tr, bl, br.
+  @if $location-or-tr == "all" or  $location-or-tr =="a"{
+    border-radius: $radius;
+  }@else if $location-or-tr =="t" {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }@else if $location-or-tr =="b" {
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }@else if $location-or-tr =="l" {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }@else if $location-or-tr =="r" {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }@else if $location-or-tr =="tl" {
+    border-top-left-radius: $radius;
+  }@else if $location-or-tr =="tr" {
+    border-top-right-radius: $radius;
+  }@else if $location-or-tr =="bl" {
+    border-bottom-left-radius: $radius;
+  }@else if $location-or-tr =="br" {
+    border-bottom-right-radius: $radius;
+  }
+
+  //Sets each radius individually.
+  @else if $radius-amount-or-tl >= 0 and $location-or-tr >= 0 and $bl >= 0 and $br >=0 {
+    //Sets units to px if unitless
+    @if unitless($location-or-tr) == true {
+      $unit-tr: 'px'
+    }@if unitless($bl) == true {
+      $unit-bl: 'px'
+    }@if unitless($br) == true {
+      $unit-br: 'px'
+    }
+    border-top-left-radius: #{$radius-amount-or-tl}$unit-tl;
+    border-top-right-radius: #{$location-or-tr}$unit-tr;
+    border-bottom-left-radius: #{$bl}$unit-bl;
+    border-bottom-right-radius: #{$br}$unit-br;
+  }
+}
+
+
+/* =-----------------------------=
+		1.2 Border Styles
+ */
+
+//You can leave the mixin blank when you include it and it will just use the global defaults.
+
+//USAGE: To use this mixin you can use it one of few different ways
+  //@include border-style(); This will just set the borders to all of the defaults.
+  //@include border-style(sides); Sides an be all, t, b, l, r, x, t. This will set the default borders on the sides specified.
+  //@include border-style(sides, thickness); Thickness can be any number in px
+  //@include border-style(sides, thickness, color); Color can be any of the color variables, ex: $cl-blue
+  //@include borderstyle($thickness: yourvalue); Set yourvalue to any valid thickness value and the sides and color will remain the default value
+  //@include borderstyle($color: yourvalue); Set yourvalue to any valid color variable and the sides and thickness will remain the default value
+
+
+@mixin border-style ($sides: 'all', $thickness: $default-border-thickness, $color: $default-border-color) {
+  @if $sides == "all"{
+    border: $thickness solid $color;
+  }@else if $sides =="t" {
+    border-top: $thickness solid $color;
+  }@else if $sides =="b" {
+    border-bottom: $thickness solid $color;
+  }@else if $sides =="l" {
+    border-left: $thickness solid $color;
+  }@else if $sides =="r" {
+    border-right: $thickness solid $color;
+  }@else if $sides =="x" {
+    border-left: $thickness solid $color;
+    border-right: $thickness solid $color;
+  }@else if $sides =="y" {
+    border-top: $thickness solid $color;
+    border-bottom: $thickness solid $color;
+  }
+}
+
+/* =-----------------------------=
+		1.3 Border
+ */
+
+//Use this one for most cases. It will use both of the mixins above. You can also leave this mixin blank when you include it.
+//USAGE: To use this mixin you can use it one of few different ways
+  //@include border(); This will just set the borders to all of the defaults. This will me the most commonly used border mixin.
+  //@include border(radius); Can be either one of the defaults: sm, md or lg or any value.
+  //@include border($color: your color)
+
+
+
+@mixin border($radius: $border-radius--sm, $color: $default-border-color, $thickness: $default-border-thickness) {
+  @include border-radius($radius);
+  @include border-style($color, $thickness);
+}

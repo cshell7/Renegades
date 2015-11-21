@@ -1,0 +1,51 @@
+/* ----------------------------------------------------------------------------------
+		Box Elevation
+---------------------------------------------------------------------------------- */
+
+/* +============================+
+A. INTRODUCTION/NOTES:
++=============================+ */
+/*
+
+For: Notes, Important things, TODO's, stuff, Tigers, Lions, Bears..., etc.
+
+*/
+
+/* +=============================+
+B. TABLE OF CONTENTS:
++=============================+ */
+/*
+
+A. Notes
+B. Table of Contents
+
+1. Elevation
+
+
+*/
+
+
+/* +=============================+
+	1. Elevation
++=============================+ */
+
+
+[data-flex--item~='elevation--1'] {
+	@include elevation(1);
+}
+
+[data-flex--item~='elevation--2'] {
+	@include elevation(2);
+}
+
+[data-flex--item~='elevation--3'] {
+	@include elevation(3);
+}
+
+[data-flex--item~='elevation--4'] {
+	@include elevation(4);
+}
+
+[data-flex--item~='elevation--5'] {
+	@include elevation(5);
+}

@@ -1,0 +1,78 @@
+/* ----------------------------------------------------------------------------------
+      STRUCTURE SCSS (Flex Frame)
+---------------------------------------------------------------------------------- */
+
+/* +============================+
+		A. INTRODUCTION/NOTES:
++=============================+ */
+/*
+
+  -Here you will find all of the structual scss. This is just used to layout the page and make it functional and responsive, not make it look pretty and glamour it up.
+
+  -Please keep the SCSS clean and organized or Terrence will hunt you down and speed slap you so hard your great-grandmother will feel it! :)
+
+
+*/
+
+/* +=============================+
+		B. TABLE OF CONTENTS:
++=============================+ */
+
+/*
+
+  A. Notes
+  B. Table of Contents
+
+  1. @import's of .scss's   //This also includes and overview of each file
+    1.0 Variables
+    1.1 Structure
+
+*/
+
+
+
+/* +=============================+
+		1. @IMPORT'S
++=============================+ */
+
+//NOTE: Each .scss file import below will have summary for quick reference, but refer to the actual file for the most up to date table of contents and description. We will try to keep these updated, but no promises.
+
+  // Posible Statuses of imported files:
+  //		DONE: Ready for Produciton
+  //		REVIEW: Needs to be reviewed and tested
+  //		CONSTRUCTION: Under construction
+  //    OLD: Needs to be updated to new styles and standards
+
+
+/* =-----------------------------=
+		1.0 Variables
+ */
+
+   /*Variables	: */
+     @import "variables-mixins.scss"; // Done (Atleast all of the structual variables and mixins are done)
+
+
+/* =-----------------------------=
+		1.1 Structure
+ */
+
+  /*OLD	: All of the old stuff until we can fully switch to the rad new stuff. */
+    @import "structure/OLD.scss"; // OLD
+
+  /*Flex	: All of the flexbox magicalness */
+    @import "structure/flex.scss"; // DONE
+
+  /*Flex Spacing Helpers	: Padding and Margin spacing helper classes */
+    @import "structure/spacing-helpers.scss"; // DONE
+
+  /*Site Containers	: The main contaiers for the site */
+    @import "structure/containers.scss"; // DONE
+
+  /*Visibility	: Visibility helper classes. */
+  @import 'structure/visibility.scss'; // DONE
+
+  /*Order	: Order helper classes. */
+  @import 'structure/order.scss'; // DONE
+
+  /*Elevation	: all of the typography stuff.*/
+  @import 'structure/elevation.scss'; // Review

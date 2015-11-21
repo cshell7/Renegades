@@ -1,0 +1,70 @@
+/* ----------------------------------------------------------------------------------
+			ELEVATION MIXIN
+---------------------------------------------------------------------------------- */
+
+/* +============================+
+		A. INTRODUCTION/NOTES:
++=============================+ */
+
+/*
+
+Mixin to set the elevation of elements. *3D glasses not requiered.
+
+*/
+
+/* +=============================+
+		B. TABLE OF CONTENTS:
++=============================+ */
+
+/*
+
+    A. Notes
+    B. Table of Contents
+
+	1. Elevation
+
+*/
+
+
+/* +=============================+
+		1. Elevation
++=============================+ */
+
+
+//These functions are use for the mixin below
+@function top-shadow($depth) {
+	$primary-offset: nth(1 2 5 11 13, $depth) * 1px;
+	$blur: nth(1 2 5 8 13, $depth) * 2px;
+	$color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+
+	@return 0 $primary-offset $blur $color;
+}
+@function bottom-shadow($depth) {
+	$primary-offset: nth(1.5 2.5 4 4 5, $depth) * 1px;
+	$blur: nth(1 2 3 4 5, $depth) * 2px;
+	$color: rgba(black, nth(.18 .20 .20 .19 .19, $depth));
+
+	@return 0 $primary-offset $blur $color;
+}
+@function z-index($depth) {
+	$z-index: nth(10 20 30 40 50, $depth);  //TODO set standard for z-indexes
+
+	@return $z-index;
+}
+
+
+//NOTE: To use this mixin just put "@include: elevation(#)" and the number 1-5 of the elevation you want; To specify the transition speed just add a second value in s or ms.
+//TODO change the transition type, ease, easein, etc.
+
+@mixin elevation($depth, $elevation-transistion-speed: $transistion) {
+	@if $depth < 1 {
+		box-shadow: none;
+		transition: box-shadow $elevation-transistion-speed easeInOutQuint;
+	} @else if $depth > 5 {
+		@warn 'Invalid $depth `#{$depth}` for mixin `card`.';
+	} @else {
+		box-shadow: bottom-shadow($depth), top-shadow($depth);
+		transition: box-shadow $elevation-transistion-speed easeInOutQuint;
+		z-index: z-index($depth);
+	}
+}
