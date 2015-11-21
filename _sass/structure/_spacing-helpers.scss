@@ -1,0 +1,766 @@
+/* ----------------------------------------------------------------------------------
+			FLEX SPACING HELPERS
+---------------------------------------------------------------------------------- */
+
+
+/* +============================+
+		A. INTRODUCTION/NOTES:
++=============================+ */
+/*
+
+  These are to help you quickly space things out using flexbox.
+
+
+*/
+
+
+/* +=============================+
+		B. TABLE OF CONTENTS:
++=============================+ */
+
+/*
+
+    A. Notes
+    B. Table of Contents
+
+		1. Margins
+		  1.1 All Sides
+		  1.2 Top
+		  1.3 Bottom
+		  1.4 Sides (X-axis)
+			1.5 Top and Bottom (Y-axis)
+			1.6 Left
+			1.7 Right
+		2. Padding
+		  2.1 All Sides
+		  2.2 Top
+		  2.3 Bottom
+		  2.4 Sides (X-axis)
+			2.5 Top and Bottom (Y-axis)
+		  2.6 Left
+		  2.7 Right
+
+*/
+
+
+/* +=============================+
+		1. Margins
++=============================+ */
+
+
+/* =-----------------------------=
+		1.1 All Sides
+ */
+
+[data-flex--item~='m--none'] {
+	margin: 0 !important;
+}
+[data-flex--item~='m--xs'] {
+	@include margin(xs);
+}
+[data-flex--item~='m--sm'] {
+	@include margin(sm);
+}
+[data-flex--item~='m--md'] {
+	@include margin(md);
+}
+[data-flex--item~='m--lg'] {
+	@include margin(lg);
+}
+[data-flex--item~='m--xl'] {
+	@include margin(xl);
+}
+[data-flex--item~='m--xxl'] {
+	@include margin(xxl);
+}
+[data-flex--item~='m--3xl'] {
+	@include margin(xxxl);
+}
+[data-flex--item~='m--4xl'] {
+	@include margin(xxxxl);
+}
+[data-flex--item~='m--5xl'] {
+	@include margin(xxxxxl);
+}
+
+/*=----------| Negative |----------=*/
+[data-flex--item~='m--xs-negative'] {
+	@include margin(xs--negative);
+}
+[data-flex--item~='m--sm-negative'] {
+	@include margin(sm--negative);
+}
+[data-flex--item~='m--md-negative'] {
+	@include margin(md--negative);
+}
+[data-flex--item~='m--lg-negative'] {
+	@include margin(lg--negative);
+}
+[data-flex--item~='m--xl-negative'] {
+	@include margin(xl--negative);
+}
+[data-flex--item~='m--xxl-negative'] {
+	@include margin(xxl--negative);
+}
+[data-flex--item~='m--3xl-negative'] {
+	@include margin(xxxl--negative);
+}
+[data-flex--item~='m--4xl-negative'] {
+	@include margin(xxxxl--negative);
+}
+[data-flex--item~='m--5xl-negative'] {
+	@include margin(xxxxxl--negative);
+}
+
+/* =-----------------------------=
+		1.2 Top
+ */
+
+[data-flex--item~='m-t--none'] {
+	margin-top: 0 !important;
+}
+[data-flex--item~='m-t--xs'] {
+	@include margin(md, top);
+}
+[data-flex--item~='m-t--sm'] {
+	@include margin(sm, top);
+}
+[data-flex--item~='m-t--md'] {
+	@include margin(md, top);
+}
+[data-flex--item~='m-t--lg'] {
+	@include margin(lg, top);
+}
+[data-flex--item~='m-t--xl'] {
+	@include margin(xl, top);
+}
+[data-flex--item~='m-t--xxl'] {
+	@include margin(xxl, top);
+}
+[data-flex--item~='m-t--3xl'] {
+	@include margin(xxxl, top);
+}
+[data-flex--item~='m-t--4xl'] {
+	@include margin(xxxxl, top);
+}
+[data-flex--item~='m-t--5xl'] {
+	@include margin(xxxxxl, top);
+}
+
+/*=----------| Negative |----------=*/
+[data-flex--item~='m-t--xs-negative'] {
+	@include margin(md--negative, top);
+}
+[data-flex--item~='m-t--sm-negative'] {
+	@include margin(sm--negative, top);
+}
+[data-flex--item~='m-t--md-negative'] {
+	@include margin(md--negative, top);
+}
+[data-flex--item~='m-t--lg-negative'] {
+	@include margin(lg--negative, top);
+}
+[data-flex--item~='m-t--xl-negative'] {
+	@include margin(xl--negative, top);
+}
+[data-flex--item~='m-t--xxl-negative'] {
+	@include margin(xxl--negative, top);
+}
+[data-flex--item~='m-t--3xl-negative'] {
+	@include margin(xxxl--negative, top);
+}
+[data-flex--item~='m-t--4xl-negative'] {
+	@include margin(xxxxl--negative, top);
+}
+[data-flex--item~='m-t--5xl-negative'] {
+	@include margin(xxxxxl--negative, top);
+}
+
+
+/* =-----------------------------=
+    1.3 Bottom
+ */
+
+[data-flex--item~='m-b--none'] {
+	margin-bottom: 0 !important;
+}
+[data-flex--item~='m-b--xs'] {
+	@include margin(xs, bottom);
+}
+[data-flex--item~='m-b--sm'] {
+	@include margin(sm, bottom);
+}
+[data-flex--item~='m-b--md'] {
+	@include margin(md, bottom);
+}
+[data-flex--item~='m-b--lg'] {
+	@include margin(lg, bottom);
+}
+[data-flex--item~='m-b--xl'] {
+	@include margin(xl, bottom);
+}
+[data-flex--item~='m-b--xxl'] {
+	@include margin(xxl, bottom);
+}
+[data-flex--item~='m-b--3xl'] {
+	@include margin(xxxl, bottom);
+}
+[data-flex--item~='m-b--4xl'] {
+	@include margin(xxxxl, bottom);
+}
+[data-flex--item~='m-b--5xl'] {
+	@include margin(xxxxxl, bottom);
+}
+
+/*=----------| Negative |----------=*/
+[data-flex--item~='m-b--xs-negative'] {
+	@include margin(xs--negative, bottom);
+}
+[data-flex--item~='m-b--sm-negative'] {
+	@include margin(sm--negative, bottom);
+}
+[data-flex--item~='m-b--md-negative'] {
+	@include margin(md--negative, bottom);
+}
+[data-flex--item~='m-b--lg-negative'] {
+	@include margin(lg--negative, bottom);
+}
+[data-flex--item~='m-b--xl-negative'] {
+	@include margin(xl--negative, bottom);
+}
+[data-flex--item~='m-b--xxl-negative'] {
+	@include margin(xxl--negative, bottom);
+}
+[data-flex--item~='m-b--3xl-negative'] {
+	@include margin(xxxl--negative, bottom);
+}
+[data-flex--item~='m-b--4xl-negative'] {
+	@include margin(xxxxl--negative, bottom);
+}
+[data-flex--item~='m-b--5xl-negative'] {
+	@include margin(xxxxxl--negative, bottom);
+}
+
+
+
+/* =-----------------------------=
+    1.4 Sides (X-axis)
+ */
+
+[data-flex--item~='m-x--none'] {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+[data-flex--item~='m-x--xs'] {
+	@include margin(xs, x);
+}
+[data-flex--item~='m-x--sm'] {
+	@include margin(sm, x);
+}
+[data-flex--item~='m-x--md'] {
+	@include margin(md, x);
+}
+[data-flex--item~='m-x--lg'] {
+	@include margin(lg, x);
+}
+[data-flex--item~='m-x--xl'] {
+	@include margin(xl, x);
+}
+[data-flex--item~='m-x--xxl'] {
+	@include margin(xxl, x);
+}
+[data-flex--item~='m-x--3xl'] {
+	@include margin(xxxl, x);
+}
+[data-flex--item~='m-x--4xl'] {
+	@include margin(xxxxl, x);
+}
+[data-flex--item~='m-x--5xl'] {
+	@include margin(xxxxxl, x);
+}
+
+/*=----------| Negative |----------=*/
+[data-flex--item~='m-x--xs-negative'] {
+	@include margin(xs--negative, x);
+}
+[data-flex--item~='m-x--sm-negative'] {
+	@include margin(sm--negative, x);
+}
+[data-flex--item~='m-x--md-negative'] {
+	@include margin(md--negative, x);
+}
+[data-flex--item~='m-x--lg-negative'] {
+	@include margin(lg--negative, x);
+}
+[data-flex--item~='m-x--xl-negative'] {
+	@include margin(xl--negative, x);
+}
+[data-flex--item~='m-x--xxl-negative'] {
+	@include margin(xxl--negative, x);
+}
+[data-flex--item~='m-x--3xl-negative'] {
+	@include margin(xxxl--negative, x);
+}
+[data-flex--item~='m-x--4xl-negative'] {
+	@include margin(xxxxl--negative, x);
+}
+[data-flex--item~='m-x--5xl-negative'] {
+	@include margin(xxxxxl--negative, x);
+}
+
+/* =-----------------------------=
+    1.5 Top and Bottom (Y-axis)
+ */
+
+[data-flex--item~='m-y--none'] {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+[data-flex--item~='m-y--xs'] {
+	@include margin(xs, y);
+}
+[data-flex--item~='m-y--sm'] {
+	@include margin(sm, y);
+}
+[data-flex--item~='m-y--md'] {
+	@include margin(md, y);
+}
+[data-flex--item~='m-y--lg'] {
+	@include margin(lg, y);
+}
+[data-flex--item~='m-y--xl'] {
+	@include margin(xl, y);
+}
+[data-flex--item~='m-y--xxl'] {
+	@include margin(xxl, y);
+}
+[data-flex--item~='m-y--3xl'] {
+	@include margin(xxxl, y);
+}
+[data-flex--item~='m-y--4xl'] {
+	@include margin(xxxxl, y);
+}
+[data-flex--item~='m-y--5xl'] {
+	@include margin(xxxxxl, y);
+}
+
+/*=----------| Negative |----------=*/
+[data-flex--item~='m-y--xs-negative'] {
+	@include margin(xs--negative, y);
+}
+[data-flex--item~='m-y--sm-negative'] {
+	@include margin(sm--negative, y);
+}
+[data-flex--item~='m-y--md-negative'] {
+	@include margin(md--negative, y);
+}
+[data-flex--item~='m-y--lg-negative'] {
+	@include margin(lg--negative, y);
+}
+[data-flex--item~='m-y--xl-negative'] {
+	@include margin(xl--negative, y);
+}
+[data-flex--item~='m-y--xxl-negative'] {
+	@include margin(xxl--negative, y);
+}
+[data-flex--item~='m-y--3xl-negative'] {
+	@include margin(xxxl--negative, y);
+}
+[data-flex--item~='m-y--4xl-negative'] {
+	@include margin(xxxxl--negative, y);
+}
+[data-flex--item~='m-y--5xl-negative'] {
+	@include margin(xxxxxl--negative, y);
+}
+
+/* =-----------------------------=
+    1.6 Left
+ */
+
+[data-flex--item~='m-l--none'] {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+[data-flex--item~='m-l--xs'] {
+	@include margin(xs, left);
+}
+[data-flex--item~='m-l--sm'] {
+	@include margin(sm, left);
+}
+[data-flex--item~='m-l--md'] {
+	@include margin(md, left);
+}
+[data-flex--item~='m-l--lg'] {
+	@include margin(lg, left);
+}
+[data-flex--item~='m-l--xl'] {
+	@include margin(xl, left);
+}
+[data-flex--item~='m-l--xxl'] {
+	@include margin(xxl, left);
+}
+[data-flex--item~='m-l--3xl'] {
+	@include margin(xxxl, left);
+}
+[data-flex--item~='m-l--4xl'] {
+	@include margin(xxxxl, left);
+}
+[data-flex--item~='m-l--5xl'] {
+	@include margin(xxxxxl, left);
+}
+
+/*=----------| Negative |----------=*/
+[data-flex--item~='m-l--xs-negative'] {
+	@include margin(xs--negative, left);
+}
+[data-flex--item~='m-l--sm-negative'] {
+	@include margin(sm--negative, left);
+}
+[data-flex--item~='m-l--md-negative'] {
+	@include margin(md--negative, left);
+}
+[data-flex--item~='m-l--lg-negative'] {
+	@include margin(lg--negative, left);
+}
+[data-flex--item~='m-l--xl-negative'] {
+	@include margin(xl--negative, left);
+}
+[data-flex--item~='m-l--xxl-negative'] {
+	@include margin(xxl--negative, left);
+}
+[data-flex--item~='m-l--3xl-negative'] {
+	@include margin(xxxl--negative, left);
+}
+[data-flex--item~='m-l--4xl-negative'] {
+	@include margin(xxxxl--negative, left);
+}
+[data-flex--item~='m-l--5xl-negative'] {
+	@include margin(xxxxxl--negative, left);
+}
+
+/* =-----------------------------=
+    1.7 Right
+ */
+
+[data-flex--item~='m-r--none'] {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+[data-flex--item~='m-r--xs'] {
+	@include margin(xs, right);
+}
+[data-flex--item~='m-r--sm'] {
+	@include margin(sm, right);
+}
+[data-flex--item~='m-r--md'] {
+	@include margin(md, right);
+}
+[data-flex--item~='m-r--lg'] {
+	@include margin(lg, right);
+}
+[data-flex--item~='m-r--xl'] {
+	@include margin(xl, right);
+}
+[data-flex--item~='m-r--xxl'] {
+	@include margin(xxl, right);
+}
+[data-flex--item~='m-r--3xl'] {
+	@include margin(xxxl, right);
+}
+[data-flex--item~='m-r--4xl'] {
+	@include margin(xxxxl, right);
+}
+[data-flex--item~='m-r--5xl'] {
+	@include margin(xxxxxl, right);
+}
+
+/*=----------| Negative |----------=*/
+[data-flex--item~='m-r--xs-negative'] {
+	@include margin(xs--negative, right);
+}
+[data-flex--item~='m-r--sm-negative'] {
+	@include margin(sm--negative, right);
+}
+[data-flex--item~='m-r--md-negative'] {
+	@include margin(md--negative, right);
+}
+[data-flex--item~='m-r--lg-negative'] {
+	@include margin(lg--negative, right);
+}
+[data-flex--item~='m-r--xl-negative'] {
+	@include margin(xl--negative, right);
+}
+[data-flex--item~='m-r--xxl-negative'] {
+	@include margin(xxl--negative, right);
+}
+[data-flex--item~='m-r--3xl-negative'] {
+	@include margin(xxxl--negative, right);
+}
+[data-flex--item~='m-r--4xl-negative'] {
+	@include margin(xxxxl--negative, right);
+}
+[data-flex--item~='m-r--5xl-negative'] {
+	@include margin(xxxxxl--negative, right);
+}
+
+
+/* +=============================+
+		2. Padding
++=============================+ */
+
+
+/* =-----------------------------=
+		2.1 All Sides
+ */
+
+[data-flex--item~='p--none'] {
+	padding: 0 !important;
+}
+[data-flex--item~='p--xs'] {
+	@include padding(xs);
+}
+[data-flex--item~='p--sm'] {
+	@include padding(sm);
+}
+[data-flex--item~='p--md'] {
+	@include padding(md);
+}
+[data-flex--item~='p--lg'] {
+	@include padding(lg);
+}
+[data-flex--item~='p--xl'] {
+	@include padding(xl);
+}
+[data-flex--item~='p--xxl'] {
+	@include padding(xxl);
+}
+[data-flex--item~='p--3xl'] {
+	@include padding(xxxl);
+}
+[data-flex--item~='p--4xl'] {
+	@include padding(xxxxl);
+}
+[data-flex--item~='p--5xl'] {
+	@include padding(xxxxxl);
+}
+
+
+/* =-----------------------------=
+		2.2 Top
+ */
+
+[data-flex--item~='p-t--none'] {
+	padding-top: 0 !important;
+}
+[data-flex--item~='p-t--xs'] {
+	@include padding(xs, top);
+}
+[data-flex--item~='p-t--sm'] {
+	@include padding(sm, top);
+}
+[data-flex--item~='p-t--md'] {
+	@include padding(md, top);
+}
+[data-flex--item~='p-t--lg'] {
+	@include padding(lg, top);
+}
+[data-flex--item~='p-t--xl'] {
+	@include padding(xl, top);
+}
+[data-flex--item~='p-t--xxl'] {
+	@include padding(xxl, top);
+}
+[data-flex--item~='p-t--3xl'] {
+	@include padding(xxxl, top);
+}
+[data-flex--item~='p-t--4xl'] {
+	@include padding(xxxxl, top);
+}
+[data-flex--item~='p-t--5xl'] {
+	@include padding(xxxxxl, top);
+}
+
+
+
+/* =-----------------------------=
+	 2.3 Bottom
+*/
+
+[data-flex--item~='p-b--none'] {
+	padding-bottom: 0 !important;
+}
+[data-flex--item~='p-b--xs'] {
+	@include padding(xs, bottom);
+}
+[data-flex--item~='p-b--sm'] {
+	@include padding(sm, bottom);
+}
+[data-flex--item~='p-b--md'] {
+	@include padding(md, bottom);
+}
+[data-flex--item~='p-b--lg'] {
+	@include padding(lg, bottom);
+}
+[data-flex--item~='p-b--xl'] {
+	@include padding(xl, bottom);
+}
+[data-flex--item~='p-b--xxl'] {
+	@include padding(xxl, bottom);
+}
+[data-flex--item~='p-b--3xl'] {
+	@include padding(xxxl, bottom);
+}
+[data-flex--item~='p-b--4xl'] {
+	@include padding(xxxxl, bottom);
+}
+[data-flex--item~='p-b--5xl'] {
+	@include padding(xxxxxl, bottom);
+}
+
+
+
+/* =-----------------------------=
+	 2.4 Sides (X-axis)
+*/
+
+[data-flex--item~='p-x--none'] {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+[data-flex--item~='p-x--xs'] {
+	@include padding(xs, x);
+}
+[data-flex--item~='p-x--sm'] {
+	@include padding(sm, x);
+}
+[data-flex--item~='p-x--md'] {
+	@include padding(md, x);
+}
+[data-flex--item~='p-x--lg'] {
+	@include padding(lg, x);
+}
+[data-flex--item~='p-x--xl'] {
+	@include padding(xl, x);
+}
+[data-flex--item~='p-x--xxl'] {
+	@include padding(xxl, x);
+}
+[data-flex--item~='p-x--3xl'] {
+	@include padding(xxxl, x);
+}
+[data-flex--item~='p-x--4xl'] {
+	@include padding(xxxxl, x);
+}
+[data-flex--item~='p-x--5xl'] {
+	@include padding(xxxxxl, x);
+}
+
+/* =-----------------------------=
+	 2.5 Top and Bottom (Y-axis)
+*/
+
+[data-flex--item~='p-y--none'] {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+[data-flex--item~='p-y--xs'] {
+	@include padding(xs, y);
+}
+[data-flex--item~='p-y--sm'] {
+	@include padding(sm, y);
+}
+[data-flex--item~='p-y--md'] {
+	@include padding(md, y);
+}
+[data-flex--item~='p-y--lg'] {
+	@include padding(lg, y);
+}
+[data-flex--item~='p-y--xl'] {
+	@include padding(xl, y);
+}
+[data-flex--item~='p-y--xxl'] {
+	@include padding(xxl, y);
+}
+[data-flex--item~='p-y--3xl'] {
+	@include padding(xxxl, y);
+}
+[data-flex--item~='p-y--4xl'] {
+	@include padding(xxxxl, y);
+}
+[data-flex--item~='p-y--5xl'] {
+	@include padding(xxxxxl, y);
+}
+
+
+
+/* =-----------------------------=
+	 2.6 left
+*/
+
+[data-flex--item~='p-l--none'] {
+	padding-left: 0 !important;
+}
+[data-flex--item~='p-l--xs'] {
+	@include padding(xs, left);
+}
+[data-flex--item~='p-l--sm'] {
+	@include padding(sm, left);
+}
+[data-flex--item~='p-l--md'] {
+	@include padding(md, left);
+}
+[data-flex--item~='p-l--lg'] {
+	@include padding(lg, left);
+}
+[data-flex--item~='p-l--xl'] {
+	@include padding(xl, left);
+}
+[data-flex--item~='p-l--xxl'] {
+	@include padding(xxl, left);
+}
+[data-flex--item~='p-l--3xl'] {
+	@include padding(xxxl, left);
+}
+[data-flex--item~='p-l--4xl'] {
+	@include padding(xxxxl, left);
+}
+[data-flex--item~='p-l--5xl'] {
+	@include padding(xxxxxl, left);
+}
+
+
+
+/* =-----------------------------=
+	 2.7 Right
+*/
+
+[data-flex--item~='p-r--none'] {
+	padding-right: 0 !important;
+}
+[data-flex--item~='p-r--xs'] {
+	@include padding(xs, right);
+}
+[data-flex--item~='p-r--sm'] {
+	@include padding(sm, right);
+}
+[data-flex--item~='p-r--md'] {
+	@include padding(md, right);
+}
+[data-flex--item~='p-r--lg'] {
+	@include padding(lg, right);
+}
+[data-flex--item~='p-r--xl'] {
+	@include padding(xl, right);
+}
+[data-flex--item~='p-r--xxl'] {
+	@include padding(xxl, right);
+}
+[data-flex--item~='p-r--3xl'] {
+	@include padding(xxxl, right);
+}
+[data-flex--item~='p-r--4xl'] {
+	@include padding(xxxxl, right);
+}
+[data-flex--item~='p-r--5xl'] {
+	@include padding(xxxxxl, right);
+}

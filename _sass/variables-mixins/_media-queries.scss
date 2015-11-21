@@ -1,0 +1,48 @@
+/* ----------------------------------------------------------------------------------
+			MEDIA QUERIES MIXIN
+---------------------------------------------------------------------------------- */
+
+/* +============================+
+		A. INTRODUCTION/NOTES:
++=============================+ */
+
+/*
+
+To set dem rad media queries. But remember, media queries aren't evil, but just like our relatives, we try to avoid them save on special occasions. Once a year for thanksgiving is enough.
+
+*/
+
+
+/* +=============================+
+		B. TABLE OF CONTENTS:
++=============================+ */
+
+/*
+
+    A. Notes
+    B. Table of Contents
+
+	1. Media Queries
+
+*/
+
+
+
+/* +=============================+
+		1. Media Queries
++=============================+ */
+
+
+//NOTE: to use these just put something like '@include media(sm){margin: 0px}' anything you put inside the curly braces will have that media query applied to it.
+
+@mixin media($query) {
+  @if $query == 'sm' {
+    @media (max-width: $screen-small) { @content;}
+  }@if $query == 'md' {
+    @media (min-width: $screen-small) and (max-width: $screen-large) { @content;}
+  }@if $query == 'lg' {
+    @media (min-width: $screen-large) { @content;}
+  }@else {
+    @media (min-width: #{$query}) { @content;}
+  }
+}

@@ -1,0 +1,106 @@
+/* ----------------------------------------------------------------------------------
+			ORDER
+---------------------------------------------------------------------------------- */
+
+/* +============================+
+		A. INTRODUCTION/NOTES:
++=============================+ */
+
+/*
+
+  Allows you to reorder flex items.
+
+  NOTE: These do not change the DOM order only the paint order. So be careful with using these when things that are tab selectable or dependant on the DOM order. Also, these only work for flex items within the same flex container.
+
+*/
+
+
+/* +=============================+
+		B. TABLE OF CONTENTS:
++=============================+ */
+
+/*
+
+    A. Notes
+    B. Table of Contents
+
+	1. Order
+
+*/
+
+
+/* +=============================+
+		1. Order
++=============================+ */
+
+//NOTE: While there are classes for these use them in data-flex--item="" instead
+
+@include media(sm){
+  [data-flex--item~='order--1-sm'] {
+    order: -5;
+  }
+  [data-flex--item~='order--2-sm'] {
+    order: -4;
+  }
+  [data-flex--item~='order--3-sm'] {
+    order: -3;
+  }
+  [data-flex--item~='order--4-sm'] {
+    order: -2;
+  }
+  [data-flex--item~='order--5-sm'] {
+    order: -1;
+  }
+}
+
+@include media(md){
+  [data-flex--item~='order--1-md'] {
+    order: -5;
+  }
+  [data-flex--item~='order--2-md'] {
+    order: -4;
+  }
+  [data-flex--item~='order--3-md'] {
+    order: -3;
+  }
+  [data-flex--item~='order--4-md'] {
+    order: -2;
+  }
+  [data-flex--item~='order--5-md'] {
+    order: -1;
+  }
+}
+
+@include media(lg){
+  [data-flex--item~='order--1-lg'] {
+    order: -5;
+  }
+  [data-flex--item~='order--2-lg'] {
+    order: -4;
+  }
+  [data-flex--item~='order--3-lg'] {
+    order: -3;
+  }
+  [data-flex--item~='order--4-lg'] {
+    order: -2;
+  }
+  [data-flex--item~='order--5-lg'] {
+    order: -1;
+  }
+}
+
+[data-flex--item~='order--1'] {
+  order: -5;
+}
+[data-flex--item~='order--2'] {
+  order: -4;
+}
+[data-flex--item~='order--3'] {
+  order: -3;
+}
+[data-flex--item~='order--4'] {
+  order: -2;
+}
+[data-flex--item~='order--5'] {
+  order: -1;
+}

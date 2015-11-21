@@ -1,0 +1,90 @@
+/* ----------------------------------------------------------------------------------
+			VISIBILITY
+---------------------------------------------------------------------------------- */
+
+/* +============================+
+		A. INTRODUCTION/NOTES:
++=============================+ */
+/*
+
+  Helper classes for hiding or displaying things depending on certain things.
+
+*/
+
+/* +=============================+
+		B. TABLE OF CONTENTS:
++=============================+ */
+/*
+
+    A. Notes
+    B. Table of Contents
+
+	1. By Screen Size
+  2. By Class
+
+*/
+
+
+/* +=============================+
+		1. By Screen Size
++=============================+ */
+
+//NOTE: While there are classes for these use them in data-flex--item=""
+
+
+[data-flex--item~='show--sm'] {
+  display: none;
+}
+[data-flex--item~='show--md'] {
+  display: none;
+}
+[data-flex--item~='show--lg'] {
+  display: none;
+}
+
+@include media(sm) {
+  [data-flex--item~='show--sm'] {
+    display: flex;
+  }
+  [data-flex--item~='hide--sm'] {
+    display: none;
+  }
+}
+
+@include media(md) {
+  [data-flex--item~='show--md'] {
+    display: flex;
+  }
+  [data-flex--item~='hide--md'] {
+    display: none;
+  }
+}
+
+@include media(lg) {
+  [data-flex--item~='show--lg'] {
+    display: flex;
+  }
+  [data-flex--item~='hide--lg'] {
+    display: none;
+  }
+}
+
+
+/* +=============================+
+		2. By Class
++=============================+ */
+
+
+//NOTE: While there are classes for these use them in data-flex--item="" instead.
+
+[data-flex--item~='none'], .none {
+  display: none;
+}
+
+[data-flex--item~='hide'], .hide {
+  visibility: hidden;
+}
+
+[data-flex--item~='show'], .show {
+  visibility: visible;
+}
