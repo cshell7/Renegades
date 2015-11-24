@@ -3,7 +3,7 @@
 title: Renegades
 email: Renegades@domain.com
 description: Climb Ride Cuddle
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/renegades"
 url: "http://cshell7.github.io/renegades/"
 
 # Build settings
