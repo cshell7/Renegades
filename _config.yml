@@ -1,9 +1,9 @@
 
 # Site settings
 title: Renegades
-email: Renegades@domain.com
+email:
 description: Climb Ride Cuddle
-baseurl: "/renegades"
+baseurl: ""
 url: "http://cshell7.github.io/renegades/"
 
 # Build settings

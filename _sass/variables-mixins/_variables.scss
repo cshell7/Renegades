@@ -21,10 +21,7 @@
     B. Table of Contents
 
     1. Colors
-  		1.1 Primary
-  		1.2 Secondary
-  		1.3 Statuses
-  		1.4 Specific Elements
+
     2. Screen Sizes
     3. Padding and Margin Sizes
     4. Transistion Speeds
@@ -46,103 +43,21 @@
 -Format: "$cl-name: #Hex; //Used in..." Ex: Borders, text, buttons
 */
 
-//TODO: Clean up what colors we actually use
-//TODO: Set the lighten and darken values.
+//Color Scheme
+
+  $cl-primary: #9DCE33;
+  $cl-secondary: #2079A0;
+  $cl-tertiary: #836493;
+  $cl-accent-1: #FC1654;
+  $cl-gray-1: #323638;
+  $cl-gray-2: #676E72;
+  $cl-gray-3: #ACB8BF;
+  $cl-gray-4: #CCE0E2;
 
 
-/* =-----------------------------=
-		1.1 Primary
- */
+//Component Specific
 
-  $cl-white: #ffffff;
-  $cl-blue: #00cbff;
-  $cl-navy: #173c62;
-
-/*=----------| Lightened/Darkened |----------=*/
-
-  $cl-white-d1: darken(#fff, 1%);
-  $cl-blue-l1: lighten( $cl-blue, 5%);
-  $cl-blue-l2: lighten( $cl-blue, 10%);
-  $cl-blue-l3: lighten( $cl-blue, 20%);
-  $cl-navy-l1: lighten( $cl-navy, 5%);
-  $cl-navy-l2: lighten( $cl-navy, 10%);
-  $cl-navy-l3: lighten( $cl-navy, 20%);
-
-
-/* =-----------------------------=
-		1.2 Secondary
- */
-
-  $cl-green: #00bb7b;
-  $cl-charcoal: #494949;
-  $cl-gray: #e2e2e2;
-  $cl-dark-blue: #0091EA;
-
-  $cl-inactive-gray: #FAFAFA;
-
-
-/*=----------| Lightened/Darkened |----------=*/
-
-  $cl-green-l1: #81eaac;
-  $cl-green-l2: #c6ffdd;
-  $cl-green-l3: #e7fff1;
-  $cl-charcoal-l1: lighten( $cl-charcoal, 5%);
-  $cl-charcoal-l2: lighten( $cl-charcoal, 10%);
-  $cl-charcoal-l3: lighten( $cl-charcoal, 20%);
-  $cl-gray-l1: lighten( $cl-gray, 5%);
-  $cl-gray-l2: lighten( $cl-gray, 10%);
-  $cl-gray-l3: lighten( $cl-gray, 15%);
-  $cl-gray-d1: darken( $cl-gray, 2%);
-  $cl-gray-d2: darken( $cl-gray, 15%);
-  $cl-gray-d3: darken( $cl-gray, 35%);
-  $cl-dark-blue-l1: lighten( $cl-dark-blue, 5%);
-  $cl-dark-blue-l2: lighten( $cl-dark-blue, 10%);
-  $cl-dark-blue-l3: lighten( $cl-dark-blue, 20%);
-
-
-/* =-----------------------------=
-		1.3 Accents
-*/
-
-  $cl-coral: #f37965;
-  $cl-light-blue: #75cfe6;
-
-/*=----------| Lightened/Darkened |----------=*/
-
-  $cl-coral-l1: lighten( $cl-coral, 5%);
-  $cl-coral-l2: lighten( $cl-coral, 10%);
-  $cl-coral-l3: lighten( $cl-coral, 20%);
-  $cl-light-blue-l1: lighten( $cl-light-blue, 5%);
-  $cl-light-blue-l2: lighten( $cl-light-blue, 10%);
-  $cl-light-blue-l3: lighten( $cl-light-blue, 20%);
-
-
-
-/* =-----------------------------=
-		1.3 Statuses
- */
-
-  $cl-good: #00bb7b;
-  $cl-semi-good: #81eaac;
-  $cl-fair: #ffc709;
-  $cl-semi-poor: #f9a000;
-  $cl-poor: #ed193f;
-
-  $cl-success: $cl-good;
-  $cl-error: $cl-poor;
-  $cl-warning: #f9a000;
-  $cl-inactive-gray: #FAFAFA;
-
-
-
-/* =-----------------------------=
-		1.4 Specific Elements
- */
-
-  $cl-pagebg: #eef2f5;
-  $cl-pagebg-d1: darken( $cl-pagebg, 10%);
-  $cl-placeholder: $cl-charcoal;
-  $cl-link-default: $cl-dark-blue;
+  $cl-pagebg: #F2FCF9;
 
 
 
@@ -174,19 +89,19 @@
 //NOTE: Leave these unitless, they are calculated in pixels.
 
   //Desktop						//Mobile
-	$xs: 4;							$xs--m: 4;
-	$sm: 8;							$sm--m: 6;
-	$md: 16;						$md--m: 10;
-	$lg: 24;						$lg--m: 14;
-	$xl: 32;						$xl--m: 18;
-	$xxl: 40;						$xxl--m: 24;
-	$xxxl: 64;					$xxxl--m: 32;
-	$xxxxl: 92;					$xxxxl--m: 40;
-	$xxxxxl: 128;				$xxxxxl--m: 64;
+	$xs: 2;							$xs--m: 2;
+	$sm: 4;							$sm--m: 2;
+	$md: 8;						$md--m: 4;
+	$lg: 14;						$lg--m: 7;
+	$xl: 26;						$xl--m: 13;
+	$xxl: 48;						$xxl--m: 24;
+	$xxxl: 72;					$xxxl--m: 37;
+	$xxxxl: 102;					$xxxxl--m: 51;
+	$xxxxxl: 146;				$xxxxxl--m: 73;
 
 //Pading ane Margin respoive ratio for horizontal sizing on smaller screens. NOTE: Only applies to card margins and site container padding. NOTE: If the ratio is 1 it will stay the same as it scales to a smaller screen. if it is .5 it will become half of the size when it gets to the small screen size.
   $responsive-ratio: .5; //Valid Range: 1 - .1
-  $responsive-min: 4; //Leave unitless, it is calculated in px. This is the minimum size the padding or margin is allowed to be on the resposive mixins.
+  $responsive-min: 2; //Leave unitless, it is calculated in px. This is the minimum size the padding or margin is allowed to be on the resposive mixins.
 
 
 /* +=============================+
@@ -205,15 +120,15 @@
     5. Typography
 +=============================+ */
 
-  $line-height: 1.61; //This sets the default line-height.
+  $line-height: 1.7; //This sets the default line-height.
 
 /* +=============================+
     6. Borders
 +=============================+ */
 
-  $border-radius--sm: 2px; //Default
-  $border-radius--md: 4px;
-  $border-radius--lg: 8px;
+  $border-radius--sm: 3px; //Default
+  $border-radius--md: 5px;
+  $border-radius--lg: 7px;
 
-  $default-border-color: $cl-gray;
+  $default-border-color: $cl-gray-1;
   $default-border-thickness: 1px;
