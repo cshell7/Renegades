@@ -6015,7 +6015,8 @@ a {
 .site__menu {
   position: fixed;
   background-color: rgba(204, 224, 226, 0.8);
-  z-index: 20; }
+  z-index: 20;
+  padding: 8px; }
 
 .site__menu__logo h1 {
   font-size: 44px;
@@ -6065,6 +6066,9 @@ a {
     z-index: -1;
     opacity: .6; }
   .site__hero img.-logo {
-    width: 200px;
-    height: auto;
+    width: 350px;
+    height: 350px;
+    margin-top: 140px;
     z-index: 10; }
+  .site__hero h1 {
+    font-size: 64px; }
