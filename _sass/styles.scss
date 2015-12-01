@@ -36,15 +36,16 @@
 
 
 /* =-----------------------------=
-		1.1
+
  */
 
 
 /*=----------|1.1.1  |----------=*/
 
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	background-color: $cl-pagebg;
+	font-weight: 400;
 	padding: 0;
 	margin: 0;
 	min-height: 100%;
@@ -107,22 +108,75 @@ a {
 
 .site__hero {
 	position: relative;
+	height: 100%;
+	height: 100vh;
+	background-color: $cl-gray-2;
+	color: #fff;
 	img.-bg {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: auto;
-		height: 100vh;
-		z-index: -1;
-		opacity: .6;
+		width: 100%;
+		width: 100vw;
+		min-height: 100%;
+		min-height: 100vh;
+		height: auto;
+		z-index: 0;
+		opacity: .7;
 	}
 	img.-logo {
-		width: 450px;
-		height: 450px;
-		margin-top: 140px;
-		z-index: 10;
+		width: 400px;
+		height: 400px;
+		z-index: 5;
 	}
 	h1 {
-		font-size: 64px;
+		@include font-size (64, 128);
+		font-weight: 100;
+		line-height: 1.5;
 	}
+	a {
+		@include padding(xxl, t);
+		cursor: pointer;
+		color: #fff;
+		&:hover {
+			color: $cl-gray-4;
+			transition: color 1s;
+		}
+	}
+	h2 {
+		font-size: 48px;
+	}
+	i {
+		font-size: 48px;
+		font-weight: 100;
+	}
+}
+
+.site__cta {
+	box-shadow: 0px 0px 200px 200px $cl-gray-1;
+	background-color: $cl-gray-1;
+	z-index: 10;
+	position: relative;
+	@include padding(xxl, b);
+	& > div {
+		overflow: hidden;
+		position: relative;
+		color: #fff;
+		background-color: #fff;
+		min-height: 400px;
+		@include margin(lg, x);
+		@include margin(md, y);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			min-height: 300px;
+			z-index: 10;
+		}
+		h3 {
+			position: relative;
+			z-index: 20
+		}
+	}
+
 }
