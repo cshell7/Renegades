@@ -38,7 +38,7 @@
 @mixin font-size ($min-font, $max-font, $responsive-line-height: $line-height) {
 	$average-font: (( $min-font + $max-font) / 2);
 	font-size: #{$average-font}px; //Fallback incase browsers don't support calc or vw.
-	font-size: calc( #{$min-font}px + (#{$max-font} - #{$min-font}) * ( (100vw - #{$responsive-screen-min}px) / ( #{$responsive-screen-max} - #{$responsive-screen-min}) ));
+	font-size: responsiveCalc($min-font, $max-font);
 	line-height: $responsive-line-height;
 	//TODO: Seperate media queries to compile into only two. Or use Clean CSS (https://github.com/jakubpawlowicz/clean-css)
 	@media (min-width: #{$responsive-screen-max}px) {

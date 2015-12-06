@@ -123,7 +123,9 @@ Always default to using these mixins to set padding and margins. This will keep 
 
 //Uses the fancy dancy formula to scale between the min and max value based on screen size.
 @function responsiveCalc($min, $max) {
-  @return calc(#{min($min)}px + (#{max($max)} - #{min($min)}) * ( (100vw - #{$responsive-screen-min}px) / ( #{$responsive-screen-max} - #{$responsive-screen-min})));
+  $A: max($max) - min($min);
+  $B: $responsive-screen-max - $responsive-screen-min;
+  @return calc(#{min($min)}px + #{$A} * ((100vw - #{$responsive-screen-min}px) / #{$B} ));
 }
 
 

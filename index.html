@@ -1,16 +1,40 @@
 ---
-layout: default
+layout: landing
 ---
 
 <div data-flex--item="full" class="site__hero">
   <img src="http://www.sundanceresort.com/d/sundanceresort/media/__thumbs_1400_622_crop/Exploring_Sundance_Scott_Barlow2.jpg" class="-bg">
-  <div data-flex--item="full p-t--3xl" data-flex--container="center">
-  <img src="{{ "/images/logo--white.svg" | prepend: site.baseurl }}" class="-logo">
-  <div data-flex--item="break"></div>
-  <h1>Site Coming Soon</h1>
-  <div data-flex--item="break"></div>
-  <h3 data-flex--item="p-t--3xl">Did you go to GGBY? I took some picture and video. If you want them just email me at <a href="mailto:renegades@normalhumans.org">renegades@normalhumans.org</a> and I can send you a link to them.</h3>
-
+  <div data-flex--item="full" data-flex--container="center">
+    <h1>Renegades</h1>
+    <div data-flex--item="break"></div>
+    <img src="{{ " /images/logo--white.svg " | prepend: site.baseurl }}" class="-logo">
+    <div data-flex--item="break"></div>
+    <a href="#cta" data-flex--container="center">
+      <h2>What Type of Adventourer are You?</h2>
+      <div data-flex--item="break"></div>
+      <i class="fa fa-arrow-circle-o-down"></i>
+    </a>
   </div>
-
+</div>
+<div data-flex--item="full" data-flex--container class="site__cta" id="cta">
+  <div data-flex--item="basis--450 grow--1" data-flex--container="">
+    <a data-flex--item="basis--250 grow--1" class="site__cta__item" href="{{ "/pages/rock-ninja.html" | prepend: site.baseurl }}">
+      <img src="http://www.adventure-community.com/img/cta-snowboarding.jpg">
+      <h3>Rock Ninja</h3>
+    </a>
+    <a data-flex--item="basis--250 grow--1" class="site__cta__item" href="{{ "/pages/yeti-chaser.html" | prepend: site.baseurl }}">
+      <img src="http://www.adventure-community.com/img/cta-snowboarding.jpg">
+      <h3>Yeti Chaser</h3>
+    </a>
+  </div>
+  <div data-flex--item="basis--450 grow--1" data-flex--container="">
+    <a data-flex--item="basis--250 grow--1" class="site__cta__item" href="{{ "/pages/line-walker.html" | prepend: site.baseurl }}">
+      <img src="http://www.adventure-community.com/img/cta-snowboarding.jpg">
+      <h3>Line Walker</h3>
+    </a>
+    <a data-flex--item="basis--250 grow--1" class="site__cta__item" href="{{ "/pages/mountain-conquerer.html" | prepend: site.baseurl }}">
+      <img src="http://www.adventure-community.com/img/cta-snowboarding.jpg">
+      <h3>Mountain Conquerer</h3>
+    </a>
+  </div>
 </div>

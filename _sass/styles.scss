@@ -42,6 +42,18 @@
 
 /*=----------|1.1.1  |----------=*/
 
+html {
+	box-sizing: border-box;
+	height: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
 body {
 	font-family: 'Raleway', sans-serif;
 	background-color: $cl-pagebg;
@@ -84,6 +96,7 @@ a {
 		font-size: 44px;
 		font-weight: 100;
 		line-height: 1.3;
+		color: $cl-gray-1;
 	}
 }
 
@@ -125,14 +138,16 @@ a {
 		opacity: .7;
 	}
 	img.-logo {
-		width: 400px;
-		height: 400px;
+		width: 40vh;
+		height: 40vh;
 		z-index: 5;
 	}
 	h1 {
-		@include font-size (64, 128);
+		@include font-size (54, 128);
 		font-weight: 100;
 		line-height: 1.5;
+		padding-top: 12px;
+		padding-top: 3vh;
 	}
 	a {
 		@include padding(xxl, t);
@@ -144,7 +159,9 @@ a {
 		}
 	}
 	h2 {
-		font-size: 48px;
+		@include font-size (26, 48);
+		@include padding(md);
+		text-align: center;
 	}
 	i {
 		font-size: 48px;
@@ -153,12 +170,12 @@ a {
 }
 
 .site__cta {
-	box-shadow: 0px 0px 200px 200px $cl-gray-1;
 	background-color: $cl-gray-1;
 	z-index: 10;
 	position: relative;
-	@include padding(xxl, b);
-	& > div {
+	@include padding(xxl, y);
+	@include padding(xl, x);
+	.site__cta__item {
 		overflow: hidden;
 		position: relative;
 		color: #fff;
@@ -174,9 +191,40 @@ a {
 			z-index: 10;
 		}
 		h3 {
-			position: relative;
-			z-index: 20
+			position: absolute;
+			@include font-size (26, 32);
+			@include padding(md);
+			z-index: 20;
+			color: $cl-gray-1;
+			width: 100%;
+			text-align: center;
+			left: 0;
+			bottom: 20%;
 		}
 	}
+
+}
+
+
+
+/* +=============================+
+		4. Segment Page
++=============================+ */
+
+.segment-page__hero {
+	height: 70%;
+	height: calc(100vh - 200px);
+	min-height: 500px;
+	background-color: $cl-gray-1;
+	h1 {
+		width: 100%;
+		text-align: center;
+		@include padding(xxxxl, t);
+		@include font-size(64, 82);
+		color: #fff;
+	}
+}
+
+.segment-page__about {
 
 }
