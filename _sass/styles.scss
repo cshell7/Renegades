@@ -68,7 +68,7 @@ body {
 }
 //Font weights: 100,300,400,700
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,p {
 	margin: 0;
 }
 
@@ -86,9 +86,11 @@ a {
 
 .site__menu {
 	position: fixed;
-	background-color: transparentize($cl-gray-4, .2);
+	background-color: transparentize($cl-gray-2, .1);
 	z-index: 20;
 	padding: 8px;
+	height: 80px;
+	color: #fff;
 }
 
 .site__menu__logo {
@@ -96,7 +98,7 @@ a {
 		font-size: 44px;
 		font-weight: 100;
 		line-height: 1.3;
-		color: $cl-gray-1;
+		color: #fff;
 	}
 }
 
@@ -105,12 +107,33 @@ a {
 	a {
 		font-size: 24px;
 		font-weight: 400;
-		@include padding(md);
+		line-height: 1.7;
+		color: #fff;
+		@include padding(4, y);
 		@include padding(lg, x);
 		border-bottom: 2px solid rgba(0, 0, 0, 0);
-		&:hover {
-			border-bottom: 2px solid $cl-secondary;
+		&.-segment {
+			font-size: 18px;
+			line-height: 1;
+			text-align: center;
 		}
+		&:hover {
+			border-bottom: 2px solid #fff;
+		}
+	}
+}
+
+.float-nav {
+	position: relative;
+	height: 80px;
+	& > div {
+		position: static;
+	}
+	&.-fixed {
+		& > div {
+		position: fixed;
+		top: 0;
+	}
 	}
 }
 
@@ -208,6 +231,17 @@ a {
 }
 
 .site__video {
+	position: relative;
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		&.-hide {
+			display: none;
+		}
+	}
 	iframe {
 		width: 100%;
 		height: calc(100vw * .5625);
@@ -229,6 +263,18 @@ a {
 	}
 }
 
+.float-nav {
+	position: relative;
+	& > div {
+		position: static;
+	}
+	&.-fixed {
+		& > div {
+		position: fixed;
+		top: 0;
+	}
+	}
+}
 
 
 /* +=============================+
@@ -259,12 +305,24 @@ a {
 
 .about-us {
 	position: relative;
-	background-color: #fff;
+	background-color: $cl-gray-4;
 	.-img {
 		width: 100%;
 		height: auto;
 	}
+	h2{
+	font-size: 48px;
+	text-align: center;
 }
+	h3 {
+		text-align: center;
+		font-size: 48px;
+	}
+	p {
+		line-height: 1.7;
+	}
+}
+
 
 
 /* +=============================+
@@ -275,16 +333,75 @@ a {
 	position: relative;
 	background-color: #fff;
 	h1 {
-		font-size: 32px;
+		font-size: 48px;
 		text-align: center;
 	}
 	i,p {
 		text-align: center;
 	}
 	i {
-		font-size: 32px;
+		font-size: 64px;
 	}
 	p {
 		font-size: 18px;
+	}
+}
+
+
+/* +=============================+
+		7. Footer
++=============================+ */
+
+.footer {
+	position: relative;
+	background-color: $cl-gray-1;
+	color: #fff;
+	.-logo {
+		height: 100px;
+		width: 100px;
+	}
+}
+
+.footer__section-1 {
+	padding-top: 6px;
+	@include padding(md, l);
+	line-height: 1.4;
+	p {
+		font-size: 12px;
+	}
+	span {
+		font-style: italic;
+		font-size: 14px;
+	}
+}
+.footer__section-2 {
+	text-align: right;
+}
+
+
+/* +=============================+
+		8. Get Involved
++=============================+ */
+
+.get-involved {
+	h2 {
+		font-size: 32px;
+		text-align: center;
+	}
+	p {
+		font-size: 20px;
+	}
+}
+
+
+/* +=============================+
+		9. Contact Us
++=============================+ */
+
+.contact-us {
+	background-color: #fff;
+	h1 {
+		font-size: 48px;
+		text-align: center;
 	}
 }

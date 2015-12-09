@@ -39,7 +39,12 @@ layout: landing
   </div>
 </div>
 
+<div id="floating-nav" data-flex--container class="float-nav">
+  {% include header.html %}
+</div>
+
 <div data-flex--item="full" data-flex--container class="site__video" id="video">
+  <a href="javascript:void callPlayer(&quot;ytplayer&quot;,&quot;playVideo&quot;)" id="videoLink"></a>
   <iframe id="ytplayer" type="text/html"
 src="https://www.youtube.com/embed/_ogKwMaU-DI?autoplay=0&controls=0&disablekb=1&rel=0&showinfo=0&autohide=1&color=white&iv_load_policy=3&theme=light&enablejsapi=1"
 frameborder="0" allowfullscreen onclick="navVideo()"></iframe>
@@ -53,40 +58,42 @@ frameborder="0" allowfullscreen onclick="navVideo()"></iframe>
 </div>
 
 <div data-flex--item="full" class="about-us">
-  <div data-flex--item="site-container" data-flex--container>
-    <div data-flex--item="basis--300 grow--1 max--500">
-      <img src="{{ " /images/team.jpg" | prepend: site.baseurl }}" class="-img">
+  <div data-flex--item="site-container p-y--4xl" data-flex--container>
+    <div data-flex--item="basis--400 grow--1 p--lg">
+      <img src="{{ " /images/team.jpg" | prepend: site.baseurl }}" data-flex--item="elevation--4" class="-img">
     </div>
-    <div data-flex--item="basis--400 grow--2">
-      <h3>About Us</h3>
-      <p>asdf asdf ;lkj asdf;ljk asdf</p>
+    <div data-flex--item="basis--400 grow--1 p--lg" data-flex--container>
+      <h3 data-flex--item="full">About Us</h3>
+      <p data-flex--item="full">Pickled twee chicharrones portland ennui, echo park synth neutra 8-bit iPhone. Drinking vinegar bicycle rights heirloom whatever shoreditch, small batch sartorial banh mi portland actually. Offal pinterest letterpress mumblecore mlkshk tattooed ethical semiotics authentic DIY, shoreditch blog. Chillwave kombucha schlitz, shabby chic offal cred everyday carry before they sold out beard street art +1. Green juice synth bespoke, gastropub irony selfies pork belly. Truffaut ramps beard trust fund food truck, 90's pop-up distillery. Migas biodiesel celiac, narwhal mlkshk chillwave whatever kinfolk church-key butcher helvetica pitchfork echo park.</p>
     </div>
 
   </div>
 </div>
 
 
-<div data-flex--item="full" class="our-mission">
-  <div data-flex--item="site-container" data-flex--container="center all-grandchildren">
-    <h1 data-flex--item="full">Our Mission</h1>
-    <div data-flex--item="basis--350" class="-item">
-      <i data-flex--item="full" class="fa fa-arrow-circle-o-down"></i>
-      <p data-flex--item="full">blah blah blah balhba lsdkfj </p>
-    </div>
-    <div data-flex--item="basis--350" class="-item">
-      <i data-flex--item="full" class="fa fa-arrow-circle-o-down"></i>
-      <p data-flex--item="full">blah blah blah balhba lsdkfj </p>
-    </div>
-    <div data-flex--item="basis--350" class="-item">
-      <i data-flex--item="full" class="fa fa-arrow-circle-o-down"></i>
-      <p data-flex--item="full">blah blah blah balhba lsdkfj </p>
-    </div>
-  </div>
-</div>
+{% include mission.html %}
+
 
 <div data-flex--item="full" class="site__cta--B">
   <div data-flex--item="site-container p-y--lg p-x--4xl"  data-flex--container>
     <h3 data-flex--item="basis--400 grow--1 p--lg">Like Epic Pictures?</h3>
-    <a data-flex--item="basis--300 p--lg" href="#">See Some of Ours</a>
+    <a data-flex--item="basis--350 p--lg" href="#">See Some of Ours</a>
   </div>
 </div>
+
+<div data-flex--item="p-t--3xl" data-flex--container style="background-color:#fff;">
+{% include contact-us.html %}
+</div>
+
+
+<script>
+var stickyOffset = $('#floating-nav').offset().top;
+
+$(window).scroll(function(){
+  var sticky = $('#floating-nav'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= stickyOffset) sticky.addClass('-fixed');
+  else sticky.removeClass('-fixed');
+});
+</script>

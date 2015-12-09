@@ -6013,7 +6013,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0; }
 
 a {
@@ -6025,23 +6025,29 @@ a {
 +=============================+ */
 .site__menu {
   position: fixed;
-  background-color: rgba(204, 224, 226, 0.8);
+  background-color: rgba(103, 110, 114, 0.9);
   z-index: 20;
-  padding: 8px; }
+  padding: 8px;
+  height: 80px;
+  color: #fff; }
 
 .site__menu__logo h1 {
   font-size: 44px;
   font-weight: 100;
   line-height: 1.3;
-  color: #323638; }
+  color: #fff; }
 
 .site__menu__links {
   z-index: 20; }
   .site__menu__links a {
     font-size: 24px;
     font-weight: 400;
-    padding: 12px;
-    padding: calc(8px + 8 * ((100vw - 400px) / 770 ));
+    line-height: 1.7;
+    color: #fff;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-top: calc(4px + 0 * ((100vw - 400px) / 770 ));
+    padding-bottom: calc(4px + 0 * ((100vw - 400px) / 770 ));
     padding-left: 17px;
     padding-right: 17px;
     padding-left: calc(12px + 10 * ((100vw - 400px) / 770 ));
@@ -6049,10 +6055,12 @@ a {
     border-bottom: 2px solid transparent; }
     @media (min-width: 1170px) {
       .site__menu__links a {
-        padding: 16px; } }
+        padding-top: 4px;
+        padding-bottom: 4px; } }
     @media (max-width: 400px) {
       .site__menu__links a {
-        padding: 8px; } }
+        padding-top: 4px;
+        padding-bottom: 4px; } }
     @media (min-width: 1170px) {
       .site__menu__links a {
         padding-left: 22px;
@@ -6061,8 +6069,21 @@ a {
       .site__menu__links a {
         padding-left: 12px;
         padding-right: 12px; } }
+    .site__menu__links a.-segment {
+      font-size: 18px;
+      line-height: 1;
+      text-align: center; }
     .site__menu__links a:hover {
-      border-bottom: 2px solid #2079A0; }
+      border-bottom: 2px solid #fff; }
+
+.float-nav {
+  position: relative;
+  height: 80px; }
+  .float-nav > div {
+    position: static; }
+  .float-nav.-fixed > div {
+    position: fixed;
+    top: 0; }
 
 /* +=============================+
 		3. Hero
@@ -6231,9 +6252,19 @@ a {
         .site__cta .site__cta__item h3 {
           padding: 8px; } }
 
-.site__video iframe {
-  width: 100%;
-  height: calc(100vw * .5625); }
+.site__video {
+  position: relative; }
+  .site__video a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+    .site__video a.-hide {
+      display: none; }
+  .site__video iframe {
+    width: 100%;
+    height: calc(100vw * .5625); }
 
 .site__cta--B {
   position: relative;
@@ -6245,6 +6276,14 @@ a {
   .site__cta--B a {
     border: 1px solid #323638;
     font-size: 32px; }
+
+.float-nav {
+  position: relative; }
+  .float-nav > div {
+    position: static; }
+  .float-nav.-fixed > div {
+    position: fixed;
+    top: 0; }
 
 /* +=============================+
 		4. Segment Page
@@ -6281,10 +6320,18 @@ a {
 +=============================+ */
 .about-us {
   position: relative;
-  background-color: #fff; }
+  background-color: #CCE0E2; }
   .about-us .-img {
     width: 100%;
     height: auto; }
+  .about-us h2 {
+    font-size: 48px;
+    text-align: center; }
+  .about-us h3 {
+    text-align: center;
+    font-size: 48px; }
+  .about-us p {
+    line-height: 1.7; }
 
 /* +=============================+
 		6. Our Mission
@@ -6293,11 +6340,60 @@ a {
   position: relative;
   background-color: #fff; }
   .our-mission h1 {
-    font-size: 32px;
+    font-size: 48px;
     text-align: center; }
   .our-mission i, .our-mission p {
     text-align: center; }
   .our-mission i {
-    font-size: 32px; }
+    font-size: 64px; }
   .our-mission p {
     font-size: 18px; }
+
+/* +=============================+
+		7. Footer
++=============================+ */
+.footer {
+  position: relative;
+  background-color: #323638;
+  color: #fff; }
+  .footer .-logo {
+    height: 100px;
+    width: 100px; }
+
+.footer__section-1 {
+  padding-top: 6px;
+  padding-left: 12px;
+  padding-left: calc(8px + 8 * ((100vw - 400px) / 770 ));
+  line-height: 1.4; }
+  @media (min-width: 1170px) {
+    .footer__section-1 {
+      padding-left: 16px; } }
+  @media (max-width: 400px) {
+    .footer__section-1 {
+      padding-left: 8px; } }
+  .footer__section-1 p {
+    font-size: 12px; }
+  .footer__section-1 span {
+    font-style: italic;
+    font-size: 14px; }
+
+.footer__section-2 {
+  text-align: right; }
+
+/* +=============================+
+		8. Get Involved
++=============================+ */
+.get-involved h2 {
+  font-size: 32px;
+  text-align: center; }
+.get-involved p {
+  font-size: 20px; }
+
+/* +=============================+
+		9. Contact Us
++=============================+ */
+.contact-us {
+  background-color: #fff; }
+  .contact-us h1 {
+    font-size: 48px;
+    text-align: center; }

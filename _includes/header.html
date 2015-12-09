@@ -1,13 +1,16 @@
 <div data-flex--item="full" class="site__menu">
-  <div data-flex--item="site-container" data-flex--container="all-grandchildren nowrap">
+  <div data-flex--item="full p-x--3xl" data-flex--container="all-grandchildren nowrap">
     <a data-flex--item="basis--250" data-flex--container="nowrap" class="site__menu__logo" href="/">
       <img src="{{ "/images/logo--small.svg" | prepend: site.baseurl }}" height="72px;" class="none">
       <h1>Renegades</h1>
     </a>
-    <div data-flex--item="grow--1" data-flex--container="row-items--bottom right" class="site__menu__links hide">
-      <a href="#">Find Your Adventure</a>
-      <a href="#">Community</a>
-      <a href="#">Contact Us</a>
+    <div data-flex--item="grow--1" data-flex--container="row-items--bottom right" class="site__menu__links">
+      <a href="{{ "/pages/rock-ninja.html" | prepend: site.baseurl }}" class="-segment">Rock<br>Ninja</a>
+      <a href="{{ "/pages/yeti-chaser.html" | prepend: site.baseurl }}" class="-segment">Yeti<br>Chaser</a>
+      <a href="{{ "/pages/line-walker.html" | prepend: site.baseurl }}" class="-segment">Line<br>Walker</a>
+      <a href="{{ "/pages/mountain-conquerer.html" | prepend: site.baseurl }}" class="-segment">Mountain<br>Conquerer</a>
+      <a href="{{ "/pages/get-involved.html" | prepend: site.baseurl }}">Get Involved</a>
+      <a href="{{ "/pages/about-us.html" | prepend: site.baseurl }}">About Us</a>
     </div>
   </div>
 </div>

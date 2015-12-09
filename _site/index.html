@@ -17,7 +17,11 @@
   <script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="/js/js.cookie.js"></script>
+  <script type="text/javascript" src="/js/noframework.waypoints.min.js"></script>
+  <script type="text/javascript" src="/js/waypoints.debug.js"></script>
+  <script type="text/javascript" src="/js/sticky.min.js"></script>
   <script type="text/javascript" src="/js/renegades.js"></script>
+
 
 
   <!-- Favicons -->
@@ -44,20 +48,6 @@
 
   <body>
 
-    <!-- <div data-flex--item="full" class="site__menu">
-  <div data-flex--item="site-container" data-flex--container="all-grandchildren nowrap">
-    <a data-flex--item="basis--250" data-flex--container="nowrap" class="site__menu__logo" href="/">
-      <img src="/images/logo--small.svg" height="72px;" class="none">
-      <h1>Renegades</h1>
-    </a>
-    <div data-flex--item="grow--1" data-flex--container="row-items--bottom right" class="site__menu__links hide">
-      <a href="#">Find Your Adventure</a>
-      <a href="#">Community</a>
-      <a href="#">Contact Us</a>
-    </div>
-  </div>
-</div>
- -->
 
         <div data-flex--item="full" class="site__hero">
   <img src="/images/hero-bg.jpg" class="-bg">
@@ -96,7 +86,28 @@
   </div>
 </div>
 
+<div id="floating-nav" data-flex--container class="float-nav">
+  <div data-flex--item="full" class="site__menu">
+  <div data-flex--item="full p-x--3xl" data-flex--container="all-grandchildren nowrap">
+    <a data-flex--item="basis--250" data-flex--container="nowrap" class="site__menu__logo" href="/">
+      <img src="/images/logo--small.svg" height="72px;" class="none">
+      <h1>Renegades</h1>
+    </a>
+    <div data-flex--item="grow--1" data-flex--container="row-items--bottom right" class="site__menu__links">
+      <a href="/pages/rock-ninja.html" class="-segment">Rock<br>Ninja</a>
+      <a href="/pages/yeti-chaser.html" class="-segment">Yeti<br>Chaser</a>
+      <a href="/pages/line-walker.html" class="-segment">Line<br>Walker</a>
+      <a href="/pages/mountain-conquerer.html" class="-segment">Mountain<br>Conquerer</a>
+      <a href="/pages/get-involved.html">Get Involved</a>
+      <a href="/pages/about-us.html">About Us</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
 <div data-flex--item="full" data-flex--container class="site__video" id="video">
+  <a href="javascript:void callPlayer(&quot;ytplayer&quot;,&quot;playVideo&quot;)" id="videoLink"></a>
   <iframe id="ytplayer" type="text/html"
 src="https://www.youtube.com/embed/_ogKwMaU-DI?autoplay=0&controls=0&disablekb=1&rel=0&showinfo=0&autohide=1&color=white&iv_load_policy=3&theme=light&enablejsapi=1"
 frameborder="0" allowfullscreen onclick="navVideo()"></iframe>
@@ -110,13 +121,13 @@ frameborder="0" allowfullscreen onclick="navVideo()"></iframe>
 </div>
 
 <div data-flex--item="full" class="about-us">
-  <div data-flex--item="site-container" data-flex--container>
-    <div data-flex--item="basis--300 grow--1 max--500">
-      <img src=" /images/team.jpg" class="-img">
+  <div data-flex--item="site-container p-y--4xl" data-flex--container>
+    <div data-flex--item="basis--400 grow--1 p--lg">
+      <img src=" /images/team.jpg" data-flex--item="elevation--4" class="-img">
     </div>
-    <div data-flex--item="basis--400 grow--2">
-      <h3>About Us</h3>
-      <p>asdf asdf ;lkj asdf;ljk asdf</p>
+    <div data-flex--item="basis--400 grow--1 p--lg" data-flex--container>
+      <h3 data-flex--item="full">About Us</h3>
+      <p data-flex--item="full">Pickled twee chicharrones portland ennui, echo park synth neutra 8-bit iPhone. Drinking vinegar bicycle rights heirloom whatever shoreditch, small batch sartorial banh mi portland actually. Offal pinterest letterpress mumblecore mlkshk tattooed ethical semiotics authentic DIY, shoreditch blog. Chillwave kombucha schlitz, shabby chic offal cred everyday carry before they sold out beard street art +1. Green juice synth bespoke, gastropub irony selfies pork belly. Truffaut ramps beard trust fund food truck, 90's pop-up distillery. Migas biodiesel celiac, narwhal mlkshk chillwave whatever kinfolk church-key butcher helvetica pitchfork echo park.</p>
     </div>
 
   </div>
@@ -124,32 +135,83 @@ frameborder="0" allowfullscreen onclick="navVideo()"></iframe>
 
 
 <div data-flex--item="full" class="our-mission">
-  <div data-flex--item="site-container" data-flex--container="center all-grandchildren">
-    <h1 data-flex--item="full">Our Mission</h1>
-    <div data-flex--item="basis--350" class="-item">
+  <div data-flex--item="site-container p-y--4xl" data-flex--container="center all-grandchildren">
+    <h1 data-flex--item="full p-b--xxl">Our Mission</h1>
+    <div data-flex--item="basis--350 p--md m--md" class="-item">
       <i data-flex--item="full" class="fa fa-arrow-circle-o-down"></i>
       <p data-flex--item="full">blah blah blah balhba lsdkfj </p>
     </div>
-    <div data-flex--item="basis--350" class="-item">
+    <div data-flex--item="basis--350 p--md m--md" class="-item">
       <i data-flex--item="full" class="fa fa-arrow-circle-o-down"></i>
       <p data-flex--item="full">blah blah blah balhba lsdkfj </p>
     </div>
-    <div data-flex--item="basis--350" class="-item">
+    <div data-flex--item="basis--350 p--md m--md" class="-item">
       <i data-flex--item="full" class="fa fa-arrow-circle-o-down"></i>
       <p data-flex--item="full">blah blah blah balhba lsdkfj </p>
     </div>
   </div>
 </div>
+
+
 
 <div data-flex--item="full" class="site__cta--B">
   <div data-flex--item="site-container p-y--lg p-x--4xl"  data-flex--container>
     <h3 data-flex--item="basis--400 grow--1 p--lg">Like Epic Pictures?</h3>
-    <a data-flex--item="basis--300 p--lg" href="#">See Some of Ours</a>
+    <a data-flex--item="basis--350 p--lg" href="#">See Some of Ours</a>
   </div>
 </div>
 
+<div data-flex--item="p-t--3xl" data-flex--container style="background-color:#fff;">
+<div data-flex--item="full" class="contact-us">
+  <div data-flex--item="site-container">
 
-    
+    <h1 data-flex--item="full p-b--xxl">Contact Us</h1>
+
+  </div>
+
+  <div class="typeform-widget" data-url="https://climbridecuddle.typeform.com/to/toS3cB" data-text="Contact" style="width:100%;height:300px;"></div>
+
+</div>
+
+
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+    <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">Powered by <a href="http://www.typeform.com/?utm_campaign=toS3cB&amp;utm_source=typeform.com-1366017-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded&amp;utm_term=EN" style="color: #999" target="_blank">Typeform</a></div>
+
+</div>
+
+
+<script>
+var stickyOffset = $('#floating-nav').offset().top;
+
+$(window).scroll(function(){
+  var sticky = $('#floating-nav'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= stickyOffset) sticky.addClass('-fixed');
+  else sticky.removeClass('-fixed');
+});
+</script>
+
+
+    <div data-flex--item="full" class="footer">
+  <div data-flex--item="site-container p--md" data-flex--container>
+    <div data-flex--item="basis--100">
+      <img src=" /images/logo--white.svg " class="-logo">
+    </div>
+    <div data-flex--item="basis--400" data-flex--container class="footer__section-1">
+      <h3 data-flex--item="full">Renegades</h3>
+      <p data-flex--item="full">Established 2015</p>
+      <span data-flex--item="full">Normal Humans<br>Extraordinary Things</span>
+    </div>
+    <div data-flex--item="basis--400 pull--right" data-flex--container class="footer__section-2">
+      <h4 data-flex--item="full">Contact Us</h4>
+      <a data-flex--item="full" href="mailto:renegades@normalhumans.org">renegades@normalhumans.org</a>
+      <a data-flex--item="full" href="tel:3853367221">385-336-7221</a>
+    </div>
+
+  </div>
+</div>
+
 
   </body>
 
