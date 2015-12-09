@@ -91,13 +91,13 @@
   //Desktop						//Mobile
 	$xs: 2;							$xs--m: 2;
 	$sm: 4;							$sm--m: 2;
-	$md: 8;						$md--m: 4;
-	$lg: 14;						$lg--m: 7;
-	$xl: 26;						$xl--m: 13;
+	$md: 16;						$md--m: 8;
+	$lg: 22;						$lg--m: 12;
+	$xl: 32;						$xl--m: 19;
 	$xxl: 48;						$xxl--m: 24;
-	$xxxl: 72;					$xxxl--m: 37;
-	$xxxxl: 102;					$xxxxl--m: 51;
-	$xxxxxl: 146;				$xxxxxl--m: 73;
+	$xxxl: 82;					$xxxl--m: 45;
+	$xxxxl: 102;					$xxxxl--m: 61;
+	$xxxxxl: 146;				$xxxxxl--m: 98;
 
 //Pading ane Margin respoive ratio for horizontal sizing on smaller screens. NOTE: Only applies to card margins and site container padding. NOTE: If the ratio is 1 it will stay the same as it scales to a smaller screen. if it is .5 it will become half of the size when it gets to the small screen size.
   $responsive-ratio: .5; //Valid Range: 1 - .1

@@ -60,16 +60,16 @@
 	flex-shrink: $flx-shrink;
 }
 
- /* =-----------------------------=
-    1.4 Max Widths
-  */
+/* =-----------------------------=
+	 1.4 Max Widths
+ */
 
 //NOTE: If you leave it unitless then it will be calulated in pixels.
 
 @mixin max-width($max-width) {
-	$unit: '';
-	@if unitless($max-width) {
-		$unit: 'px';
-	}
-	max-width: #{$max-width}$unit;
+ $unit: '';
+ @if unitless($max-width) {
+	 $unit: 'px';
+ }
+ max-width: #{$max-width}#{$unit};
 }

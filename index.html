@@ -3,7 +3,7 @@ layout: landing
 ---
 
 <div data-flex--item="full" class="site__hero">
-  <img src="http://www.sundanceresort.com/d/sundanceresort/media/__thumbs_1400_622_crop/Exploring_Sundance_Scott_Barlow2.jpg" class="-bg">
+  <img src="{{ "/images/hero-bg.jpg" | prepend: site.baseurl }}" class="-bg">
   <div data-flex--item="full" data-flex--container="center">
     <h1>Renegades</h1>
     <div data-flex--item="break"></div>
@@ -16,7 +16,7 @@ layout: landing
     </a>
   </div>
 </div>
-<div data-flex--item="full" data-flex--container class="site__cta" id="cta">
+<div data-flex--item="full" data-flex--container="row-items--middle" class="site__cta" id="cta">
   <div data-flex--item="basis--450 grow--1" data-flex--container="">
     <a data-flex--item="basis--250 grow--1" class="site__cta__item" href="{{ "/pages/rock-ninja.html" | prepend: site.baseurl }}">
       <img src="http://www.adventure-community.com/img/cta-snowboarding.jpg">
@@ -36,5 +36,57 @@ layout: landing
       <img src="http://www.adventure-community.com/img/cta-snowboarding.jpg">
       <h3>Mountain Conquerer</h3>
     </a>
+  </div>
+</div>
+
+<div data-flex--item="full" data-flex--container class="site__video" id="video">
+  <iframe id="ytplayer" type="text/html"
+src="https://www.youtube.com/embed/_ogKwMaU-DI?autoplay=0&controls=0&disablekb=1&rel=0&showinfo=0&autohide=1&color=white&iv_load_policy=3&theme=light&enablejsapi=1"
+frameborder="0" allowfullscreen onclick="navVideo()"></iframe>
+</div>
+
+<div data-flex--item="full" class="site__cta--B">
+  <div data-flex--item="site-container p-y--lg p-x--4xl"  data-flex--container>
+    <h3 data-flex--item="basis--400 grow--1 p--lg">Are you ready to Adventure?</h3>
+    <a data-flex--item="basis--300 p--lg" href="#">Yes</a>
+  </div>
+</div>
+
+<div data-flex--item="full" class="about-us">
+  <div data-flex--item="site-container" data-flex--container>
+    <div data-flex--item="basis--300 grow--1 max--500">
+      <img src="{{ " /images/team.jpg" | prepend: site.baseurl }}" class="-img">
+    </div>
+    <div data-flex--item="basis--400 grow--2">
+      <h3>About Us</h3>
+      <p>asdf asdf ;lkj asdf;ljk asdf</p>
+    </div>
+
+  </div>
+</div>
+
+
+<div data-flex--item="full" class="our-mission">
+  <div data-flex--item="site-container" data-flex--container="center all-grandchildren">
+    <h1 data-flex--item="full">Our Mission</h1>
+    <div data-flex--item="basis--350" class="-item">
+      <i data-flex--item="full" class="fa fa-arrow-circle-o-down"></i>
+      <p data-flex--item="full">blah blah blah balhba lsdkfj </p>
+    </div>
+    <div data-flex--item="basis--350" class="-item">
+      <i data-flex--item="full" class="fa fa-arrow-circle-o-down"></i>
+      <p data-flex--item="full">blah blah blah balhba lsdkfj </p>
+    </div>
+    <div data-flex--item="basis--350" class="-item">
+      <i data-flex--item="full" class="fa fa-arrow-circle-o-down"></i>
+      <p data-flex--item="full">blah blah blah balhba lsdkfj </p>
+    </div>
+  </div>
+</div>
+
+<div data-flex--item="full" class="site__cta--B">
+  <div data-flex--item="site-container p-y--lg p-x--4xl"  data-flex--container>
+    <h3 data-flex--item="basis--400 grow--1 p--lg">Like Epic Pictures?</h3>
+    <a data-flex--item="basis--300 p--lg" href="#">See Some of Ours</a>
   </div>
 </div>

@@ -126,7 +126,7 @@ a {
 	background-color: $cl-gray-2;
 	color: #fff;
 	img.-bg {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -171,8 +171,10 @@ a {
 
 .site__cta {
 	background-color: $cl-gray-1;
+	background-color: rgba(50, 54, 56, .8);
 	z-index: 10;
 	position: relative;
+	min-height: 100vh;
 	@include padding(xxl, y);
 	@include padding(xl, x);
 	.site__cta__item {
@@ -205,6 +207,28 @@ a {
 
 }
 
+.site__video {
+	iframe {
+		width: 100%;
+		height: calc(100vw * .5625);
+	}
+}
+
+.site__cta--B {
+	position: relative;
+	background-color: $cl-primary;
+	h3,a {
+		text-align: center;
+	}
+	h3 {
+		font-size: 32px;
+	}
+	a {
+		border: 1px solid $cl-gray-1;
+		font-size: 32px;
+	}
+}
+
 
 
 /* +=============================+
@@ -227,4 +251,40 @@ a {
 
 .segment-page__about {
 
+}
+
+/* +=============================+
+		5. About Us
++=============================+ */
+
+.about-us {
+	position: relative;
+	background-color: #fff;
+	.-img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+/* +=============================+
+		6. Our Mission
++=============================+ */
+
+.our-mission {
+	position: relative;
+	background-color: #fff;
+	h1 {
+		font-size: 32px;
+		text-align: center;
+	}
+	i,p {
+		text-align: center;
+	}
+	i {
+		font-size: 32px;
+	}
+	p {
+		font-size: 18px;
+	}
 }
