@@ -204,7 +204,7 @@ a {
 		position: relative;
 		color: #fff;
 		background-color: #fff;
-		min-height: 400px;
+		height: 400px;
 		@include margin(lg, x);
 		@include margin(md, y);
 		&:hover div.-bg {
@@ -214,11 +214,11 @@ a {
 			position: absolute;
 			top: 0;
 			left: 0;
-			min-height: 300px;
+			min-height: 450px;
 			z-index: 10;
-			width: 100%;
-			z-index: 5;
-		}
+			height: 100%;
+			width: auto;
+				}
 		div.-bg {
 			position: absolute;
 			top: 0;
