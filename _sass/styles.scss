@@ -104,6 +104,9 @@ a {
 
 .site__menu__links {
 	z-index: 20;
+	@media (max-width: 800px) {
+		display: none;
+	}
 	a {
 		font-size: 24px;
 		font-weight: 400;
