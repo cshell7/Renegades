@@ -21,6 +21,8 @@
   <script type="text/javascript" src="/js/waypoints.debug.js"></script>
   <script type="text/javascript" src="/js/sticky.min.js"></script>
   <script type="text/javascript" src="/js/renegades.js"></script>
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+
 
 
 
@@ -43,6 +45,19 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-71215218-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid');
+    ga('send', 'pageview');
+
+  </script>
+
 </head>
 
 
@@ -55,18 +70,19 @@
       <h1>Renegades</h1>
     </a>
     <div data-flex--item="grow--1" data-flex--container="row-items--bottom right" class="site__menu__links">
-      <a href="/pages/rock-ninja.html" class="-segment">Rock<br>Ninja</a>
-      <a href="/pages/yeti-chaser.html" class="-segment">Yeti<br>Chaser</a>
-      <a href="/pages/line-walker.html" class="-segment">Line<br>Walker</a>
-      <a href="/pages/mountain-conquerer.html" class="-segment">Mountain<br>Conquerer</a>
-      <a href="/pages/get-involved.html">Get Involved</a>
-      <a href="/pages/about-us.html">About Us</a>
+      <a href="/pages/rock-ninja.html" class="-segment" id="header__rock-ninja">Rock<br>Ninja</a>
+      <a href="/pages/yeti-chaser.html" class="-segment" id="header__yeti-chaser">Yeti<br>Chaser</a>
+      <a href="/pages/line-walker.html" class="-segment" id="header__line-walker">Line<br>Walker</a>
+      <a href="/pages/mountain-conquerer.html" class="-segment" id="header__mountain-conquerer">Mountain<br>Conquerer</a>
+      <a href="/pages/get-involved.html" id="header__get-involved">Get Involved</a>
+      <a href="/pages/about-us.html" id="header__about-us">About Us</a>
     </div>
   </div>
 </div>
 
 
         <div data-flex--item="full" class="segment-page__hero">
+  <img src="/images/mountain-conquerer--full.jpg">
   <h1>Mountain Conquerer</h1>
 
 </div>

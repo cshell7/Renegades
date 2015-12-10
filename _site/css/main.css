@@ -6098,10 +6098,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    width: 100vw;
-    min-height: 100%;
-    min-height: 100vh;
+    width: 2200px;
     height: auto;
     z-index: 0;
     opacity: .7; }
@@ -6143,7 +6140,8 @@ a {
     line-height: 1.7;
     padding: 12px;
     padding: calc(8px + 8 * ((100vw - 400px) / 770 ));
-    text-align: center; }
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); }
     @media (min-width: 1170px) {
       .site__hero h2 {
         font-size: 48px; } }
@@ -6167,21 +6165,25 @@ a {
   position: relative;
   min-height: 100vh;
   padding-top: 36px;
-  padding-bottom: 36px;
   padding-top: calc(24px + 24 * ((100vw - 400px) / 770 ));
-  padding-bottom: calc(24px + 24 * ((100vw - 400px) / 770 ));
+  padding-bottom: 81.5px;
+  padding-bottom: calc(61px + 41 * ((100vw - 400px) / 770 ));
   padding-left: 25.5px;
   padding-right: 25.5px;
   padding-left: calc(19px + 13 * ((100vw - 400px) / 770 ));
   padding-right: calc(19px + 13 * ((100vw - 400px) / 770 )); }
   @media (min-width: 1170px) {
     .site__cta {
-      padding-top: 48px;
-      padding-bottom: 48px; } }
+      padding-top: 48px; } }
   @media (max-width: 400px) {
     .site__cta {
-      padding-top: 24px;
-      padding-bottom: 24px; } }
+      padding-top: 24px; } }
+  @media (min-width: 1170px) {
+    .site__cta {
+      padding-bottom: 102px; } }
+  @media (max-width: 400px) {
+    .site__cta {
+      padding-bottom: 61px; } }
   @media (min-width: 1170px) {
     .site__cta {
       padding-left: 32px;
@@ -6220,12 +6222,26 @@ a {
       .site__cta .site__cta__item {
         margin-top: 8px;
         margin-bottom: 8px; } }
+    .site__cta .site__cta__item:hover div.-bg {
+      opacity: 0; }
     .site__cta .site__cta__item img {
       position: absolute;
       top: 0;
       left: 0;
       min-height: 300px;
-      z-index: 10; }
+      z-index: 10;
+      width: 100%;
+      z-index: 5; }
+    .site__cta .site__cta__item div.-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #676E72;
+      opacity: .4;
+      z-index: 5;
+      transition: opacity .3s ease; }
     .site__cta .site__cta__item h3 {
       position: absolute;
       font-size: 29px;
@@ -6234,11 +6250,13 @@ a {
       padding: 12px;
       padding: calc(8px + 8 * ((100vw - 400px) / 770 ));
       z-index: 20;
-      color: #323638;
+      color: #fff;
+      font-weight: 600;
       width: 100%;
       text-align: center;
       left: 0;
-      bottom: 20%; }
+      bottom: 8%;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); }
       @media (min-width: 1170px) {
         .site__cta .site__cta__item h3 {
           font-size: 32px; } }
@@ -6251,6 +6269,13 @@ a {
       @media (max-width: 400px) {
         .site__cta .site__cta__item h3 {
           padding: 8px; } }
+  .site__cta .-continue {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 64px;
+    color: #fff; }
 
 .site__video {
   position: relative; }
@@ -6260,6 +6285,9 @@ a {
     left: 0;
     height: 100%;
     width: 100%; }
+    @media (max-width: 800px) {
+      .site__video a {
+        display: none !important; } }
     .site__video a.-hide {
       display: none; }
   .site__video iframe {
@@ -6289,11 +6317,22 @@ a {
 		4. Segment Page
 +=============================+ */
 .segment-page__hero {
-  height: 70%;
-  height: calc(100vh - 200px);
-  min-height: 500px;
-  background-color: #323638; }
+  background-color: #323638;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+  max-height: calc(100vh - 40px); }
+  .segment-page__hero img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto; }
   .segment-page__hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     text-align: center;
     padding-top: 81.5px;
@@ -6301,7 +6340,8 @@ a {
     font-size: 73px;
     font-size: calc(64px + 18 * ((100vw - 400px) / 770 ));
     line-height: 1.7;
-    color: #fff; }
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); }
     @media (min-width: 1170px) {
       .segment-page__hero h1 {
         padding-top: 102px; } }
@@ -6314,6 +6354,13 @@ a {
     @media (max-width: 400px) {
       .segment-page__hero h1 {
         font-size: 64px; } }
+
+.segment-page__about {
+  position: relative;
+  z-index: 5; }
+  .segment-page__about p {
+    font-size: 24px;
+    padding-top: 24px; }
 
 /* +=============================+
 		5. About Us
@@ -6331,7 +6378,8 @@ a {
     text-align: center;
     font-size: 48px; }
   .about-us p {
-    line-height: 1.7; }
+    line-height: 1.7;
+    font-size: 20px; }
 
 /* +=============================+
 		6. Our Mission
@@ -6347,7 +6395,8 @@ a {
   .our-mission i {
     font-size: 64px; }
   .our-mission p {
-    font-size: 18px; }
+    padding-top: 22px;
+    font-size: 32px; }
 
 /* +=============================+
 		7. Footer
@@ -6397,3 +6446,13 @@ a {
   .contact-us h1 {
     font-size: 48px;
     text-align: center; }
+
+.mailing-form label {
+  font-size: 22px; }
+.mailing-form input {
+  font-size: 18px; }
+.mailing-form .button {
+  width: 100% !important; }
+
+.indicates-required {
+  margin-left: auto; }

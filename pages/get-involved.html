@@ -4,6 +4,7 @@ title: Get Involved
 ---
 
 <div data-flex--item="full" class="segment-page__hero">
+  <img src="{{ "/images/get-involved.jpg" | prepend: site.baseurl }}">
   <h1>{{page.title}}</h1>
 
 </div>
@@ -11,14 +12,20 @@ title: Get Involved
 <div data-flex--item="full" data-flex--container="all-grandchildren" class="get-involved">
   <div data-flex--item="site-container p-y--3xl">
     <h2 data-flex--item="full p-b--md">Stay up to date with the latest:</h2>
-    <div data-flex--item="full p--lg">
-      <img data-flex--item="m--md" src="{{ "/images/facebook.png" | prepend: site.baseurl }}" height="100">
-      <p data-flex--item="basis--400 grow--1 m--md">Next level locavore mixtape, hashtag forage keffiyeh viral banh mi. Post-ironic pitchfork PBR&B vinyl neutra. Raw denim four dollar toast cray PBR&B.</p>
+    <div data-flex--item="basis--400 grow--1 p--lg">
+      <a data-flex--item="basis--100" href="https://www.facebook.com/extraodinarythings/" target="_blank">
+        <img data-flex--item="m--md" src="{{ "/images/facebook.png" | prepend: site.baseurl }}" height="100">
+      </a>
+      <p data-flex--item="basis--400 grow--1 p-x--md m--md">Stay in touch with the latest outdoor news, upcoming events and opportunities to get involved. <a href="https://www.facebook.com/extraodinarythings/" target="_blank">Check it out!</a></p>
     </div>
-    <div data-flex--item="full p--lg">
-      <p data-flex--item="basis--400 grow--1 m--md">Next level locavore mixtape, hashtag forage keffiyeh viral banh mi. Post-ironic pitchfork PBR&B vinyl neutra. Raw denim four dollar toast cray PBR&B.</p>
-      <img data-flex--item="m--md" src="{{ "/images/instagram.png" | prepend: site.baseurl }}" height="100">
+    <div data-flex--item="basis--400 grow--1 p--lg">
+      <a data-flex--item="basis--100" href="https://www.instagram.com/renegades_normalhumans/" target="_blank">
+        <img data-flex--item="m--md" src="{{ "/images/instagram.png" | prepend: site.baseurl }}" height="100">
+      </a>
+      <p data-flex--item="basis--400 grow--1 p-x--md m--md">Check out the latest pictures from our trips and events. <a href="https://www.instagram.com/renegades_normalhumans/" target="_blank">See them now!</a></p>
     </div>
+
+    {% include mailing-form.html %}
 
   </div>
 </div>
